@@ -1,5 +1,5 @@
-$accent-color: #fab719;
-$black:#131313;
+$accent: #fab719;
+$dark:#131313;
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 body {
-    background-color: $black;
+    background-color: $dark;
     font-family: 'GlacialIndifferenceRegular', sans-serif;
     letter-spacing: 0.15em;
     color: #fff;
@@ -23,8 +23,8 @@ body {
 
 section {
     width: 100%;
-    padding-top: 1em;
-    margin-bottom: 5%;
+    // padding-top: 1em;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -45,9 +45,9 @@ NAV SECTION
 nav {
     width: 100%;
     height: auto;
-    // background-color: transparent;
     display: flex;
     justify-content: center;
+    position: fixed;
 }
 
 .epek-icon {
@@ -63,11 +63,11 @@ HERO SECTION
 #hero {
     width: 100%;
     height: 100vh;
-    
+
     display: flex;
     justify-content: center;
-    
-    background: url(../assets/epek_bg.png);
+
+    background: url(../assets/EPEK-IATG.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,12 +87,13 @@ HERO SECTION
 
     .hero-wordmark {
         width: 80%;
+        max-width: 450px;
     }
 
     .hero-divide {
-        width:80%;
+        width: 80%;
         height: 1px;
-        background-color: $accent-color;
+        background-color: $accent;
         margin: 1em auto;
         border-radius: 10px;
     }
@@ -104,35 +105,6 @@ HERO SECTION
     }
 }
 
-/********
-AUDITIONS SECTION
-********/
-
-.auditions-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
-    h1 {
-        color: $accent-color;
-        text-transform: uppercase;
-        letter-spacing: 0.5em;
-
-    }
-
-    h2 {
-        font-size: 14px;
-    }
-}
-
-
-
-
-
-
-
 
 
 
@@ -141,6 +113,9 @@ AUDITIONS SECTION
 /********
 VIDEO SECTION
 ********/
+#video {
+    background-color: #000;
+}
 
 .video-wrapper {
     width: 80%;
@@ -183,97 +158,16 @@ ABOUT SECTION
 }
 
 #epek-bio {
-    width: 90%;
+    max-width: 800px;
     height: 100%;
-
     padding: 3em;
-    // border: 2px solid $accent-color;
+    // border: 2px solid $accent;
+    font-size: 1.3rem;
 }
 
 .epek-mantra {
-    color: $accent-color;
+    color: $accent;
     font-weight: bold;
-}
-
-
-
-
-/********
-AUDITIONS SECTION
-********/
-
-#auditions {
-    margin-bottom: 2em;
-}
-
-.section-title {
-    text-align: center;
-    overflow: hidden;
-    margin-bottom: 1.3em;
-
-    .auditions-tag {
-        text-transform: uppercase;
-        font-size: 2em;
-        position: relative;
-        line-height: 2.5em;
-        padding: 0 1em;
-        display: inline-block;
-        letter-spacing: 0.3em;
-    }
-
-    .auditions-tag:before,
-    .auditions-tag:after {
-        content: "";
-        height: 2px;
-        /* any width higher than the widest part of the page */
-        width: 1000px;
-        position: absolute;
-        top: 50%;
-        display: block;
-        background-color: $accent-color;
-    }
-
-    .auditions-tag:before {
-        left: -1000px;
-    }
-
-    .auditions-tag:after {
-        right: -1000px;
-    }
-}
-
-.auditions-content {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    text-transform: uppercase;
-
-    .auditions-date {
-        color: $accent-color;
-        font-size: 2.5em;
-    }
-
-
-    .auditions-time {
-        font-size: 1.5em;
-    }
-
-}
-
-.auditions-map {
-    text-align: left;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    position: relative;
-    margin: 2em auto 0 auto;
-
-
-    iframe {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
 }
 
 
@@ -283,27 +177,102 @@ FOOTER SECTION
 ********/
 
 footer {
-    background-color: $black;
-    height: 75px;
-    margin: 0 1em;
+    background-color: #000;
+    width: 100%;
+    height: 100px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    // justify-content: space-between;
     align-items: center;
+    justify-content: center;
 
     .footer-icon {
-        height: 40px;
+        height: 50%;
     }
 
-    .social-menu {
-        a {
-            i {
-                font-size: 2em;
-                margin-left: 0.25em;
-                color: #fff;
-                &:hover {
-                    color: $accent-color;
-                }
+
+}
+
+
+.social-menu {
+    display: none;
+    margin: 1rem;
+
+    a {
+        i {
+            font-size: 1.5em;
+            margin-left: 0.25em;
+            color: #fff;
+
+            &:hover {
+                color: $accent;
             }
         }
     }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .social-menu {
+        display: block;
+
+    }
+
+    .icon-bar {
+        display: none;
+    }
+
+}
+
+
+
+/********
+STICKY SOCIAL
+********/
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+
+.instagram {
+    background: #FD1D1D;
+    color: white;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+
+.youtube {
+    background: #bb0000;
+    color: white;
 }

@@ -16,8 +16,7 @@ body {
 
 section {
   width: 100%;
-  padding-top: 1em;
-  margin-bottom: 5%;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +47,8 @@ nav {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: fixed; }
 
 .epek-icon {
   margin-top: 1em;
@@ -67,7 +67,7 @@ HERO SECTION
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(../assets/epek_bg.png);
+  background: url(../assets/EPEK-IATG.png);
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -83,7 +83,8 @@ HERO SECTION
   text-align: center;
   font-family: "Open Sans Condensed"; }
   #hero-content .hero-wordmark {
-    width: 80%; }
+    width: 80%;
+    max-width: 450px; }
   #hero-content .hero-divide {
     width: 80%;
     height: 1px;
@@ -96,34 +97,11 @@ HERO SECTION
     letter-spacing: 0.2em; }
 
 /********
-AUDITIONS SECTION
-********/
-.auditions-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .auditions-info h1 {
-    color: #fab719;
-    text-transform: uppercase;
-    letter-spacing: 0.5em; }
-  .auditions-info h2 {
-    font-size: 14px; }
-
-/********
 VIDEO SECTION
 ********/
+#video {
+  background-color: #000; }
+
 .video-wrapper {
   width: 80%;
   margin: 1em auto; }
@@ -165,93 +143,92 @@ ABOUT SECTION
     width: 100%; }
 
 #epek-bio {
-  width: 90%;
+  max-width: 800px;
   height: 100%;
-  padding: 3em; }
+  padding: 3em;
+  font-size: 1.3rem; }
 
 .epek-mantra {
   color: #fab719;
   font-weight: bold; }
 
 /********
-AUDITIONS SECTION
-********/
-#auditions {
-  margin-bottom: 2em; }
-
-.section-title {
-  text-align: center;
-  overflow: hidden;
-  margin-bottom: 1.3em; }
-  .section-title .auditions-tag {
-    text-transform: uppercase;
-    font-size: 2em;
-    position: relative;
-    line-height: 2.5em;
-    padding: 0 1em;
-    display: inline-block;
-    letter-spacing: 0.3em; }
-  .section-title .auditions-tag:before,
-  .section-title .auditions-tag:after {
-    content: "";
-    height: 2px;
-    /* any width higher than the widest part of the page */
-    width: 1000px;
-    position: absolute;
-    top: 50%;
-    display: block;
-    background-color: #fab719; }
-  .section-title .auditions-tag:before {
-    left: -1000px; }
-  .section-title .auditions-tag:after {
-    right: -1000px; }
-
-.auditions-content {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  text-transform: uppercase; }
-  .auditions-content .auditions-date {
-    color: #fab719;
-    font-size: 2.5em; }
-  .auditions-content .auditions-time {
-    font-size: 1.5em; }
-
-.auditions-map {
-  text-align: left;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  position: relative;
-  margin: 2em auto 0 auto; }
-  .auditions-map iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute; }
-
-/********
 FOOTER SECTION
 ********/
 footer {
-  background-color: #131313;
-  height: 75px;
-  margin: 0 1em;
+  background-color: #000;
+  width: 100%;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   footer .footer-icon {
-    height: 40px; }
-  footer .social-menu a i {
-    font-size: 2em;
+    height: 50%; }
+
+.social-menu {
+  display: none;
+  margin: 1rem; }
+  .social-menu a i {
+    font-size: 1.5em;
     margin-left: 0.25em;
     color: #fff; }
-    footer .social-menu a i:hover {
+    .social-menu a i:hover {
       color: #fab719; }
+
+@media screen and (max-width: 600px) {
+  .social-menu {
+    display: block; }
+
+  .icon-bar {
+    display: none; } }
+/********
+STICKY SOCIAL
+********/
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px; }
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000; }
+
+.instagram {
+  background: #FD1D1D;
+  color: white; }
+
+.facebook {
+  background: #3B5998;
+  color: white; }
+
+.twitter {
+  background: #55ACEE;
+  color: white; }
+
+.youtube {
+  background: #bb0000;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
