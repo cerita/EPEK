@@ -1,0 +1,309 @@
+$accent-color: #fab719;
+$black:#131313;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $black;
+    font-family: 'GlacialIndifferenceRegular', sans-serif;
+    letter-spacing: 0.15em;
+    color: #fff;
+    // border: 1px solid forestgreen;
+}
+
+section {
+    width: 100%;
+    padding-top: 1em;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+/********
+NAV SECTION
+********/
+
+nav {
+    width: 100%;
+    height: auto;
+    // background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.epek-icon {
+    margin-top: 1em;
+    width: 40px;
+    height: 40px;
+}
+
+/********
+HERO SECTION
+********/
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    
+    background: url(../assets/epek_bg.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-bg-photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#hero-content {
+    width: 100%;
+    text-align: center;
+    font-family: "Open Sans Condensed";
+
+    .hero-wordmark {
+        width: 80%;
+    }
+
+    .hero-divide {
+        width:80%;
+        height: 1px;
+        background-color: $accent-color;
+        margin: 1em auto;
+        border-radius: 10px;
+    }
+
+    .hero-tagline {
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 0.2em;
+    }
+}
+
+/********
+AUDITIONS SECTION
+********/
+
+.auditions-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    h1 {
+        color: $accent-color;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/********
+VIDEO SECTION
+********/
+
+.video-wrapper {
+    width: 80%;
+    margin: 1em auto;
+}
+
+.EPEK-video {
+    // width:80%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin: 0 auto;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+
+/********
+ABOUT SECTION
+********/
+
+#about {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.epek-founders {
+    width: 100%;
+
+    .founders-photo {
+        width: 100%;
+    }
+}
+
+#epek-bio {
+    width: 90%;
+    height: 100%;
+
+    padding: 3em;
+    // border: 2px solid $accent-color;
+}
+
+.epek-mantra {
+    color: $accent-color;
+    font-weight: bold;
+}
+
+
+
+
+/********
+AUDITIONS SECTION
+********/
+
+#auditions {
+    margin-bottom: 2em;
+}
+
+.section-title {
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 1.3em;
+
+    .auditions-tag {
+        text-transform: uppercase;
+        font-size: 2em;
+        position: relative;
+        line-height: 2.5em;
+        padding: 0 1em;
+        display: inline-block;
+        letter-spacing: 0.3em;
+    }
+
+    .auditions-tag:before,
+    .auditions-tag:after {
+        content: "";
+        height: 2px;
+        /* any width higher than the widest part of the page */
+        width: 1000px;
+        position: absolute;
+        top: 50%;
+        display: block;
+        background-color: $accent-color;
+    }
+
+    .auditions-tag:before {
+        left: -1000px;
+    }
+
+    .auditions-tag:after {
+        right: -1000px;
+    }
+}
+
+.auditions-content {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+
+    .auditions-date {
+        color: $accent-color;
+        font-size: 2.5em;
+    }
+
+
+    .auditions-time {
+        font-size: 1.5em;
+    }
+
+}
+
+.auditions-map {
+    text-align: left;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin: 2em auto 0 auto;
+
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+
+
+
+/********
+FOOTER SECTION
+********/
+
+footer {
+    background-color: $black;
+    height: 75px;
+    margin: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-icon {
+        height: 40px;
+    }
+
+    .social-menu {
+        a {
+            i {
+                font-size: 2em;
+                margin-left: 0.25em;
+                color: #fff;
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}
