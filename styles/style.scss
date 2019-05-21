@@ -19,7 +19,6 @@ body {
     font-family: 'GlacialIndifferenceRegular', sans-serif;
     letter-spacing: 0.15em;
     color: $text;
-    // border: 1px solid forestgreen;
 }
 
 section {
@@ -49,7 +48,6 @@ nav {
     height: auto;
     display: flex;
     justify-content: center;
-    // position:fixed;
     margin-bottom: -3em;
 }
 
@@ -70,7 +68,7 @@ HERO SECTION
     display: flex;
     justify-content: center;
 
-    background: url(../assets/EPEK-IATG.png);
+    background: url(../assets/EPEK-IATG.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,7 +124,6 @@ VIDEO SECTION
 }
 
 .EPEK-video {
-    // width:80%;
     height: 0;
     padding-bottom: 56.25%;
     position: relative;
@@ -195,7 +192,6 @@ footer {
     height: 100px;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     align-items: center;
     justify-content: center;
 
