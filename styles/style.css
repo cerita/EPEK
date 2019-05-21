@@ -50,7 +50,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: fixed; }
+  margin-bottom: -3em; }
 
 .epek-icon {
   margin-top: 1em;
