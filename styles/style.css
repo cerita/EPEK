@@ -16,7 +16,7 @@ body {
 
 section {
   width: 100%;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,7 +28,9 @@ section {
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  font-size: 1.3rem;
+  line-height: 2rem; }
 
 h1,
 h2,
@@ -117,9 +119,9 @@ VIDEO SECTION
     position: absolute; }
 
 /********
-ABOUT SECTION
+ABOUT & WORKSHOPS SECTIONS
 ********/
-#about {
+#about, #workshops {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,22 +137,27 @@ ABOUT SECTION
       align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-align: center; }
 
-.epek-founders {
-  width: 100%; }
-  .epek-founders .founders-photo {
-    width: 100%; }
+.epek-bio, .workshops-text {
+  max-width: 650px;
+  padding: 3em; }
+  .epek-bio h2, .workshops-text h2 {
+    margin-bottom: 1.5rem; }
 
-#epek-bio {
-  max-width: 800px;
-  height: 100%;
-  padding: 3em;
-  font-size: 1.3rem; }
-
-.epek-mantra {
+.accent {
   color: #fab719;
   font-weight: bold; }
+
+.btn {
+  border: 1px solid #fff;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  color: #fff; }
+
+.sub {
+  font-size: 0.8rem; }
 
 /********
 FOOTER SECTION

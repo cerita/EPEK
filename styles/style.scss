@@ -1,5 +1,6 @@
 $accent: #fab719;
 $dark:#131313;
+$text: #fff;
 
 * {
     margin: 0;
@@ -17,18 +18,19 @@ body {
     background-color: $dark;
     font-family: 'GlacialIndifferenceRegular', sans-serif;
     letter-spacing: 0.15em;
-    color: #fff;
+    color: $text;
     // border: 1px solid forestgreen;
 }
 
 section {
     width: 100%;
-    // padding-top: 1em;
-    margin: 0;
+    margin: 0 0 1.5rem 0;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 
 h1,
@@ -137,40 +139,44 @@ VIDEO SECTION
 }
 
 /********
-ABOUT SECTION
+ABOUT & WORKSHOPS SECTIONS
 ********/
 
-#about {
+#about, #workshops {
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.epek-founders {
-    width: 100%;
 
-    .founders-photo {
-        width: 100%;
+.epek-bio, .workshops-text {
+    h2 {
+        margin-bottom:1.5rem;
     }
-}
-
-#epek-bio {
-    max-width: 800px;
-    height: 100%;
+    max-width: 650px;
     padding: 3em;
-    // border: 2px solid $accent;
-    font-size: 1.3rem;
+    
 }
 
-.epek-mantra {
+.accent {
     color: $accent;
     font-weight: bold;
 }
 
+.btn{
+    border: 1px solid $text;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    color: $text;
+}
 
+.sub {
+    font-size: 0.8rem;
+}
 
 /********
 FOOTER SECTION
@@ -202,7 +208,7 @@ footer {
         i {
             font-size: 1.5em;
             margin-left: 0.25em;
-            color: #fff;
+            color: $text;
 
             &:hover {
                 color: $accent;
